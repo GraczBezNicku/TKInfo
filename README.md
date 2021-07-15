@@ -4,6 +4,7 @@ TKInfo is a plugin for SCP:SL that informs players about team damage, thus makin
 # Recent Info
 
 12/07/2021: I'm tired for now since I've spent all my day making this so I'll make this page look better later.
+15/07/2021 New Update!
 
 # Installation
 1. You will need to install EXILED (https://github.com/Exiled-Team/EXILED) and download the .dll file from "Releases"
@@ -15,9 +16,20 @@ The plugins has only one persmission and it's tkinfo.modalert . It's responsible
 
 # Default Config Options
 ```
+  t_k_info:
   is_enabled: true
   # Displays damage dealt to the target
   display_damage: true
+  # Lets players report team dammagers / killers. If teamKillerNotifier is on true, reports can be used as an early warning.
+  can_report: true
+  # Will notify the entire server on OnRoundStart about a player who has done {maxNotifierDamage} or has recivied {maxNotifierReports}.
+  team_killer_notifier: true
+  # If canReport is enabled, on every OnWaitingOnPlayers a notification will appear, reminding people that they can report!
+  report_reminder: true
+  # Length of reportReminder
+  report_reminder_length: 20
+  # If teamKillerNotifier is set to true, this is the limit needed to broadcast about a player. (It will loop and display the highest report number)
+  max_notifier_reports: 10
   # If someone gets team damaged beyond limit it will alert people with tkinfo.modalert permission
   mod_alert: true
   # people with tkinfo.modalert permission will only see the notification when they're dead if this is set to true.
@@ -30,6 +42,14 @@ The plugins has only one persmission and it's tkinfo.modalert . It's responsible
   player_alert_length: 6
   # Length of the mod alerts
   mod_alert_length: 12
+  # Length of the most reported players alerts
+  on_round_start_alert_length: 12
+  # Message for reportReminder
+  report_reminder_message: <color=green>[TKInfo]</color> You can report players who team damage in console (~ key) using <color=lime>.report <steamid64></color>
+  # Displays a warning about the most reported player (needs to be reported {maxNotifierReports} times.) (No damage shown)
+  on_round_start_not_no_d_m_g: <color=green>[TKInfo]</color> <color=maroon>{player}</color> is the most reported player online, standing at <color=brown>{reports}</color> reports for team damage, be careful around them!
+  # Displays a warning about the most reported player (needs to be reported {maxNotifierReports} times.) (shows damage)
+  on_round_start_not: <color=green>[TKInfo]</color> <color=maroon>{player}</color> is the most reported player online, standing at <color=brown>{reports}</color> reports for team damage and has dealt over <color=red>{dmg}</color> HP to their teammates. Be careful around them!
   # Displays a warning that the team damage hit was higher than alertDamage and displayDamage is set to true.
   mod_alert_msg: <color=green>[TK-Info]</color> <color=lime>{player}</color> was attacked by their teammate <color=maroon>{player2}</color> for <color=red>{dmg}</color> HP!
   # Displays a warning that the team damage hit was higher than alertDamage and displayDamage is set to false.
