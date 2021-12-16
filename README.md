@@ -1,4 +1,4 @@
-# TKInfo
+# TKInfo (Currently Outdated)
 TKInfo is a plugin for SCP:SL that informs players about team damage, thus making it easier to navigate and punish teamkillers.
 
 # Recent Info
