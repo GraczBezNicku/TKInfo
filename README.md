@@ -1,12 +1,6 @@
 # TKInfo
 TKInfo is a plugin for SCP:SL that informs players about team damage, thus making it easier to navigate and punish teamkillers.
 
-# Recent Info
-
-12/07/2021: I'm tired for now since I've spent all my day making this so I'll make this page look better later.
-
-15/07/2021 New Update!
-
 # Installation
 1. You will need to install EXILED (https://github.com/Exiled-Team/EXILED) and download the .dll file from "Releases"
 2. Navigate to your Plugins folder and put the dll there.
