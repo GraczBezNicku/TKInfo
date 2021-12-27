@@ -6,6 +6,9 @@ TKInfo is a plugin for SCP:SL that informs players about team damage, thus makin
 2. Navigate to your Plugins folder and put the dll there.
 3. Go to your configs and configure both permissions and options.
 
+#Displaying Damage
+For now I'm experimenting with manually calculating damage so that display_damage would work again. However give me a couple of days, since I'm doing other things now. (27/12/2021)
+
 # Permissions
 The plugins has only one persmission and it's tkinfo.modalert . It's responsible for notyfing server moderators about recent team damage.
 
