@@ -16,8 +16,12 @@ The plugins has only one persmission and it's tkinfo.modalert . It's responsible
 ```
   t_k_info:
   is_enabled: true
-  # Displays damage dealt to the target
-  display_damage: true
+  # Text sent to players's console when trying to report DNT players
+  d_n_t_report_fail: "[TKInfo] Couldn't report player because they are DNT users. More info below."
+  # Information on what is DNT and why can't players report DNT users
+  d_n_t_info_text: DNT (short for 'Do Not Track') are users which data cannot be tracked outside of administritive use. Because TKInfo's report command is purely to inform players about the most reported player by storing their information, we can't store DNT user steamids because it isn't neccesary to function properly (And would put their data at risk of being exposed to non-staff players).
+  # Displays damage dealt to the target (DUE TO A BASE GAME ISSUE THAT AFFECTED EXILED I CAN NO LONGER FETCH ACTUAL DAMAGE, LEAVE THAT TO FALSE OR EXPECT INCORRECT DAMAGE   VALUES)
+  display_damage: false
   # Lets players report team dammagers / killers. If teamKillerNotifier is on true, reports can be used as an early warning.
   can_report: true
   # Will notify the entire server on OnRoundStart about a player who has done {maxNotifierDamage} or has recivied {maxNotifierReports}.
@@ -34,8 +38,8 @@ The plugins has only one persmission and it's tkinfo.modalert . It's responsible
   mod_alert_only_when_dead: true
   # Upon shooting a teammate, the attacker also gets the notification.
   notify_attacker: true
-  # Damage limit, which upon reaching will alert people with tkinfo.modalert permission. (modAlert must be set to true!)
-  alert_damage: 70
+  # Damage limit, which upon reaching will alert people with tkinfo.modalert permission. (modAlert must be set to true! Because of displayDamage not working correctly, I    recommend setting this to 1 and modAlertOnlyWhenDead to true.)
+  alert_damage: 1
   # Length of the player alerts
   player_alert_length: 6
   # Length of the mod alerts
@@ -49,15 +53,15 @@ The plugins has only one persmission and it's tkinfo.modalert . It's responsible
   # Displays a warning about the most reported player (needs to be reported {maxNotifierReports} times.) (shows damage)
   on_round_start_not: <color=green>[TKInfo]</color> <color=maroon>{player}</color> is the most reported player online, standing at <color=brown>{reports}</color> reports for team damage and has dealt over <color=red>{dmg}</color> HP to their teammates. Be careful around them!
   # Displays a warning that the team damage hit was higher than alertDamage and displayDamage is set to true.
-  mod_alert_msg: <color=green>[TK-Info]</color> <color=lime>{player}</color> was attacked by their teammate <color=maroon>{player2}</color> for <color=red>{dmg}</color> HP!
+  mod_alert_msg: <color=green>[TK-Info]</color> <color=lime>{player}</color> was attacked by their teammate <color=maroon>{player2} ({steamid64})</color> for <color=red>{dmg}</color> HP!
   # Displays a warning that the team damage hit was higher than alertDamage and displayDamage is set to false.
-  mod_alert_msg_no_d_m_g: <color=green>[TK-Info]</color> <color=lime>{player}</color> was attacked by their teammate <color=maroon>{player2}</color>!
+  mod_alert_msg_no_d_m_g: <color=green>[TK-Info]</color> <color=lime>{player}</color> was attacked by their teammate <color=maroon>{player2} ({steamid64})</color>!
   # Displays when attacked by your teammate and displayDamage is set to true,
-  attack_msg: <color=green>[TK-Info]</color> You were attacked by your teammate {player} for <color=red>{dmg}</color> HP!
+  attack_msg: <color=green>[TK-Info]</color> You were attacked by your teammate {player} ({steamid64}) for <color=red>{dmg}</color> HP!
   # Displays when you attack your teammate and displayDamage is set to true
   attacker_notification: <color=green>[TK-Info]</color> You attacked your teammate {player} for <color=red>{dmg}</color> HP!
   # Displays when attacked by your teammate and displayDamage is set to false
-  attack_msg_no_d_m_g: <color=green>[TK-Info]</color> You were attacked by your teammate {player}!
+  attack_msg_no_d_m_g: <color=green>[TK-Info]</color> You were attacked by your teammate {player} ({steamid64})!
   # Displays when you attack your teammate and displayDamage is set to false
   attacker_notification_no_d_m_g: <color=green>[TK-Info]</color> You attacked your teammate {player}!
 ```
