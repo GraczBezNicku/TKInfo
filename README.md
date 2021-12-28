@@ -10,7 +10,7 @@ TKInfo is a plugin for SCP:SL that informs players about team damage, thus makin
 For now I'm experimenting with manually calculating damage so that display_damage would work again. However give me a couple of days, since I'm doing other things now. (27/12/2021)
 
 # Permissions
-The plugins has only one persmission and it's tkinfo.modalert . It's responsible for notyfing server moderators about recent team damage.
+The plugin has only one persmission and it's tkinfo.modalert . It's responsible for notyfing server moderators about recent team damage.
 
 # Default Config Options
 ```
