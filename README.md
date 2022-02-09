@@ -38,5 +38,7 @@ The plugin has only one persmission and it's tkinfo.modalert . It's responsible 
   reporting_is_disabled_response: Reporting has been disabled on this server.
   alert_reported_player: <color=green>[TKINFO]</color> <color=green>{reporter} ({reporterID})</color> has reported <color=maroon>{reported} ({reportedID})</color>
   alert_report_duration: 6
-
+  report_reminder: true
+  report_reminder_broadcast: <color=green>[TKINFO]</color> You can report players to online staff by using <color=lime>.report Nickname</color> in your console
+  report_reminder_duration: 10
 ```
