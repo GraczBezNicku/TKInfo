@@ -23,14 +23,17 @@ The plugin has only one persmission and it's tkinfo.modalert . It's responsible 
   webhook_avatar_u_r_l: https://cdn.discordapp.com/attachments/434037173281488899/940610688760545290/mrozonyhyperthink.jpg
   webhook_kill_text: ':red_square: [TEAM-KILL] :red_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by their teammate {attacker} ({attackerID}) playing as {attackerRole}. <@&{roleID}>'
   webhook_cuff_kill_text: ':orange_square: [CUFF-KILL] :orange_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by {attacker} ({attackerID}) playing as {attackerRole} whilst cuffed. <@&{roleID}>'
+  webhook_suicide_text: ':yellow_square: [SUICIDE] :yellow_square: {Time} {target} ({targetID}) playing as {targetRole} has commited suicide by {damageType} <@&{roleID}>'
   notify_attacker: true
   attacker_message: <color=green>[TKINFO]</color> You have attacked your teammate <color=lime>{target}</color>!
   target_message: <color=green>[TKINFO]</color> You have been attacked by your teammate <color=maroon>{attacker} ({attackerID})</color>
   broadcast_duration: 3
   log_cuffed_kills: false
+  log_suicides: true
   alert_only_when_dead: true
   alert_message_kill: <color=green>[TKINFO]</color> <color=maroon>{killer} ({killerID})</color> has killed their teammate <color=lime>{target} ({targetID})</color>!
   alert_message_cuffed_killl: <color=green>[TKINFO]</color> <color=maroon>{killer} ({killerID})</color> has killed a cuffed player <color=lime>{target} ({targetID})</color>!
+  alert_suicide: <color=green>[TKINFO]</color> <color=maroon>{target} ({targetID})</color> has commited suicide by <color=red>{damageType}</color>
   alert_duration: 3
   can_players_report: true
   player_not_found_response: Player doesn't exit or has left the server.
