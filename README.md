@@ -12,7 +12,7 @@ The plugin has only one persmission and it's tkinfo.modalert . It's responsible 
 
 # Default Config Options
 ```
- t_k_info:
+t_k_info:
   is_enabled: true
   log_via_discord_webhook: false
   webhook_u_r_l: ''
@@ -21,6 +21,54 @@ The plugin has only one persmission and it's tkinfo.modalert . It's responsible 
   webhook_kill_text: ':red_square: [TEAM-KILL] :red_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by their teammate {attacker} ({attackerID}) playing as {attackerRole}. <@&{roleID}>'
   webhook_cuff_kill_text: ':orange_square: [CUFF-KILL] :orange_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by {attacker} ({attackerID}) playing as {attackerRole} whilst cuffed. <@&{roleID}>'
   webhook_suicide_text: ':yellow_square: [SUICIDE] :yellow_square: {Time} {target} ({targetID}) playing as {targetRole} has commited suicide by {damageType} <@&{roleID}>'
+  whitelisted_roles:
+  - ClassD
+  death_reasons:
+  - Unknown
+  - Falldown
+  - Warhead
+  - Decontamination
+  - Asphyxiation
+  - Posion
+  - Bleeding
+  - MicroHid
+  - Tesla
+  - Scp
+  - Explosion
+  - Scp018
+  - Scp207
+  - Recontainment
+  - Crushed
+  - FemurBreaker
+  - PocketDimension
+  - FriendlyFireDetector
+  - SeveredHands
+  - Custom
+  - Scp049
+  - Scp0492
+  - Scp096
+  - Scp173
+  - Scp106
+  - Scp939
+  - Crossvec
+  - Logicer
+  - Revolver
+  - Shotgun
+  - AK
+  - Com15
+  - Com18
+  - Fsp9
+  - E11Sr
+  - Hypothermia
+  deaths_not_to_cound_as_suicide:
+  - Warhead
+  - Decontamination
+  - Asphyxiation
+  - Poison
+  - Recontainment
+  - FemurBreaker
+  - PocketDimension
+  - Hypothermia
   notify_attacker: true
   attacker_message: <color=green>[TKINFO]</color> You have attacked your teammate <color=lime>{target}</color>!
   target_message: <color=green>[TKINFO]</color> You have been attacked by your teammate <color=maroon>{attacker} ({attackerID})</color>
