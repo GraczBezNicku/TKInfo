@@ -31,6 +31,7 @@ namespace TKInfo
             "Asphyxiation",
             "Posion",
             "Bleeding",
+            "Firearm",
             "MicroHid",
             "Tesla",
             "Scp",
