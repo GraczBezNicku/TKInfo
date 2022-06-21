@@ -31,6 +31,7 @@ t_k_info:
   - Asphyxiation
   - Posion
   - Bleeding
+  - Firearm
   - MicroHid
   - Tesla
   - Scp
