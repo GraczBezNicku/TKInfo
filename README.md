@@ -27,7 +27,7 @@ t_k_info:
   whitelisted_roles:
   - ClassD
   death_reasons:
-  "Unknown", //note that not all of them will actually occur, I just need them all to convert from DamageType later...
+  "Unknown",
   "Falldown",
   "Warhead",
   "Decontamination",
