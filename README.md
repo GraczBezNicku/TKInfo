@@ -15,6 +15,9 @@ The plugin has only one persmission and it's tkinfo.modalert . It's responsible 
 t_k_info:
   is_enabled: true
   log_via_discord_webhook: false
+  discord_webhook_cooldown: 60
+  # Whenever TKInfo recieves a rate-limit response code, webhooks will be sent with this delay (in seconds) to avoid restrictions.
+  forced_cooldown_timer: 900
   webhook_u_r_l: ''
   staff_role_i_d: ''
   webhook_avatar_u_r_l: https://cdn.discordapp.com/attachments/434037173281488899/940610688760545290/mrozonyhyperthink.jpg
@@ -24,43 +27,44 @@ t_k_info:
   whitelisted_roles:
   - ClassD
   death_reasons:
-  - Unknown
-  - Falldown
-  - Warhead
-  - Decontamination
-  - Asphyxiation
-  - Posion
-  - Bleeding
-  - Firearm
-  - MicroHid
-  - Tesla
-  - Scp
-  - Explosion
-  - Scp018
-  - Scp207
-  - Recontainment
-  - Crushed
-  - FemurBreaker
-  - PocketDimension
-  - FriendlyFireDetector
-  - SeveredHands
-  - Custom
-  - Scp049
-  - Scp0492
-  - Scp096
-  - Scp173
-  - Scp106
-  - Scp939
-  - Crossvec
-  - Logicer
-  - Revolver
-  - Shotgun
-  - AK
-  - Com15
-  - Com18
-  - Fsp9
-  - E11Sr
-  - Hypothermia
+  "Unknown", //note that not all of them will actually occur, I just need them all to convert from DamageType later...
+  "Falldown",
+  "Warhead",
+  "Decontamination",
+  "Asphyxiation",
+  "Posion",
+  "Bleeding",
+  "Firearm",
+  "MicroHid",
+  "Tesla",
+  "Scp",
+  "Explosion",
+  "Scp018",
+  "Scp207",
+  "Recontainment",
+  "Crushed",
+  "FemurBreaker",
+  "PocketDimension",
+  "FriendlyFireDetector",
+  "SeveredHands",
+  "Custom",
+  "Scp049",
+  "Scp0492",
+  "Scp096",
+  "Scp173",
+  "Scp106",
+  "Scp939",
+  "Crossvec",
+  "Logicer",
+  "Revolver",
+  "Shotgun",
+  "AK",
+  "Com15",
+  "Com18",
+  "Fsp9",
+  "E11Sr",
+  "Hypothermia",
+  "ParticleDisruptor"
   deaths_not_to_cound_as_suicide:
   - Warhead
   - Decontamination
