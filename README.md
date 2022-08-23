@@ -4,7 +4,6 @@ TKInfo is a plugin for SCP:SL that informs players about team damage. It also ha
 # Installation
 1. You will need to install EXILED (https://github.com/Exiled-Team/EXILED) and download the .dll file from "Releases"
 2. Navigate to your Plugins folder and put the dll "TKInfo.dll" there.
-3. Put the other DLLs in dependencies folder.
 4. Go to your configs and configure both permissions and options.
 
 # Permissions
@@ -15,9 +14,9 @@ The plugin has only one persmission and it's tkinfo.modalert . It's responsible 
 t_k_info:
   is_enabled: true
   log_via_discord_webhook: false
-  discord_webhook_cooldown: 60
+  discord_webhook_cooldown: 10
   # Whenever TKInfo recieves a rate-limit response code, webhooks will be sent with this delay (in seconds) to avoid restrictions.
-  forced_cooldown_timer: 900
+  forced_cooldown_timer: 600
   webhook_u_r_l: ''
   staff_role_i_d: ''
   webhook_avatar_u_r_l: https://cdn.discordapp.com/attachments/434037173281488899/940610688760545290/mrozonyhyperthink.jpg
