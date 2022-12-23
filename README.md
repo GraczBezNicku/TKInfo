@@ -13,6 +13,7 @@ The plugin has only one persmission and it's tkinfo.modalert . It's responsible 
 ```
 t_k_info:
   is_enabled: true
+  debug: false
   log_via_discord_webhook: false
   discord_webhook_cooldown: 10
   # Whenever TKInfo recieves a rate-limit response code, webhooks will be sent with this delay (in seconds) to avoid restrictions.
@@ -20,51 +21,53 @@ t_k_info:
   webhook_u_r_l: ''
   staff_role_i_d: ''
   webhook_avatar_u_r_l: https://cdn.discordapp.com/attachments/434037173281488899/940610688760545290/mrozonyhyperthink.jpg
-  webhook_kill_text: ':red_square: [TEAM-KILL] :red_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by their teammate {attacker} ({attackerID}) playing as {attackerRole}. <@&{roleID}>'
-  webhook_cuff_kill_text: ':orange_square: [CUFF-KILL] :orange_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by {attacker} ({attackerID}) playing as {attackerRole} whilst cuffed. <@&{roleID}>'
+  webhook_kill_text: ':red_square: [TEAM-KILL] :red_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by their teammate {attacker} ({attackerID}) playing as {attackerRole} with {damageType}. <@&{roleID}>'
+  webhook_cuff_kill_text: ':orange_square: [CUFF-KILL] :orange_square: {Time} {target} ({targetID}) playing as {targetRole} was killed by {attacker} ({attackerID}) playing as {attackerRole} whilst cuffed with {damageType}. <@&{roleID}>'
   webhook_suicide_text: ':yellow_square: [SUICIDE] :yellow_square: {Time} {target} ({targetID}) playing as {targetRole} has commited suicide by {damageType} <@&{roleID}>'
+  webhook_hurt_text: ':brown_square: [HURT] :brown_square: {Time} {target} ({targetID}) playing as {targetRole} was hurt by their teammate {attacker} ({attackerID}) playing as {attackerRole} with {damageType} <@&{roleID}>'
   whitelisted_roles:
   - ClassD
   death_reasons:
-  "Unknown",
-  "Falldown",
-  "Warhead",
-  "Decontamination",
-  "Asphyxiation",
-  "Posion",
-  "Bleeding",
-  "Firearm",
-  "MicroHid",
-  "Tesla",
-  "Scp",
-  "Explosion",
-  "Scp018",
-  "Scp207",
-  "Recontainment",
-  "Crushed",
-  "FemurBreaker",
-  "PocketDimension",
-  "FriendlyFireDetector",
-  "SeveredHands",
-  "Custom",
-  "Scp049",
-  "Scp0492",
-  "Scp096",
-  "Scp173",
-  "Scp106",
-  "Scp939",
-  "Crossvec",
-  "Logicer",
-  "Revolver",
-  "Shotgun",
-  "AK",
-  "Com15",
-  "Com18",
-  "Fsp9",
-  "E11Sr",
-  "Hypothermia",
-  "ParticleDisruptor"
-  deaths_not_to_cound_as_suicide:
+  - Unknown
+  - Falldown
+  - Warhead
+  - Decontamination
+  - Asphyxiation
+  - Posion
+  - Bleeding
+  - Firearm
+  - MicroHid
+  - Tesla
+  - Scp
+  - Explosion
+  - Scp018
+  - Scp207
+  - Recontainment
+  - Crushed
+  - FemurBreaker
+  - PocketDimension
+  - FriendlyFireDetector
+  - SeveredHands
+  - Custom
+  - Scp049
+  - Scp0492
+  - Scp096
+  - Scp173
+  - Scp106
+  - Scp939
+  - Crossvec
+  - Logicer
+  - Revolver
+  - Shotgun
+  - AK
+  - Com15
+  - Com18
+  - Fsp9
+  - E11Sr
+  - Hypothermia
+  - ParticleDisruptor
+  - Scp956
+  deaths_not_to_count_as_suicide:
   - Warhead
   - Decontamination
   - Asphyxiation
@@ -74,9 +77,12 @@ t_k_info:
   - PocketDimension
   - Hypothermia
   notify_attacker: true
+  notify_target: true
+  disable_after_round_ends: true
   attacker_message: <color=green>[TKINFO]</color> You have attacked your teammate <color=lime>{target}</color>!
   target_message: <color=green>[TKINFO]</color> You have been attacked by your teammate <color=maroon>{attacker} ({attackerID})</color>
   broadcast_duration: 3
+  log_hurting: true
   log_cuffed_kills: false
   log_suicides: true
   alert_only_when_dead: true
